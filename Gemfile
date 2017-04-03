@@ -15,6 +15,7 @@ group :production do
 end
 
 group :development do
+  gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'sqlite3'
@@ -31,10 +32,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'simplecov'
   gem 'rails-controller-testing'
-end
-
-group :development, :test do
-  gem 'pry-rails'
 end
 
 gem 'devise', '~> 4.1', '>= 4.1.1'
