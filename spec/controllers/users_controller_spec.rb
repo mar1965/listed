@@ -11,7 +11,7 @@ RSpec.describe UsersController, type: :controller do
   describe "GET show" do
 
     before do
-      get :show, {id: factory_user.id, email: factory_user.email}
+      get :show, {id: user.id, email: user.email}
     end
 
     it "returns http success" do
