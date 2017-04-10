@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
-  #root 'welcome#index'
-  root 'users#show'
+  root 'welcome#index'
 
 end

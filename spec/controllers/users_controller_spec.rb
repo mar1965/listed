@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
-  let(:@user) { create(:user, email: "listed@email.com") }
 
   before(:each) do
     @user = FactoryGirl.create(:user)
@@ -11,7 +10,7 @@ RSpec.describe UsersController, type: :controller do
   describe "GET show" do
 
     before do
-      get :show, {id: user.id, email: user.email}
+      get :show, {id: @user.id, email: @user.email}
     end
 
     it "returns http success" do
