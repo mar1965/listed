@@ -2,8 +2,15 @@
   <div class="col-md-8">
     <div class="media">
       <div class="media-body">
-        <h3 class="media-heading">Welcome <%= current_user.email %>!</h3>
+        <h4 class="media-heading">Welcome <%= current_user.email %>!</h4>
         <%= render 'items/form', item: Item.new %>
+        <% @items.each do |item| %>
+          <div class="media">
+            <div class="media-body">
+              <p><%= item.name %></p>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
