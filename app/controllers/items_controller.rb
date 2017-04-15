@@ -1,15 +1,12 @@
 class ItemsController < ApplicationController
-  after_action :verify_authorized, except: [:index]
 
   def new
     @item = Item.new
-    authorize @item
   end
 
   def create
     @item = Item.new(item_params)
     @item.user = current_user
-    authorize @item
 
     if @item.save
       flash[:notice]  = "To do item was saved."
