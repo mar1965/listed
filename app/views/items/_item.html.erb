@@ -1,2 +1,8 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
+<%= content_tag :div, class: 'media' do %>
+  <div class="media-body">
+    <small>
+      <%= @user.name %> created <%= time_ago_in_words(item.created_at) %> ago
+    </small>
+    <p><%= item.name %></p>
+  </div>
+<% end %>
