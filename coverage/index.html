@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-04-15T16:00:33-10:00">2017-04-15T16:00:33-10:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-04-15T16:09:29-10:00">2017-04-15T16:09:29-10:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -4039,7 +4039,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  let(:@user) { create(:user, email: &quot;listeduser@email.com&quot;) }</code>
+          <code class="ruby">  let(:@user) { create(:user, email: Faker::Internet.email) }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
@@ -4111,7 +4111,7 @@
         <li class="covered" data-hits="2" data-linenumber="16">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect{post :create, item: {name: Faker::StarWars.quote, email: &quot;listeduser@email.com&quot;}}.to change(Item,:count).by(1)</code>
+          <code class="ruby">      expect{post :create, item: {name: Faker::StarWars.quote, user_id: 1}}.to change(Item,:count).by(1)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
@@ -4135,7 +4135,7 @@
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">      post :create, item: {name: Faker::StarWars.quote, email: &quot;listeduser@email.com&quot;}</code>
+          <code class="ruby">      post :create, item: {name: Faker::StarWars.quote, user_id: 1}</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="21">
@@ -4219,7 +4219,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">    name Faker::StarWars.droid</code>
+          <code class="ruby">    name Faker::StarWars.quote</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
