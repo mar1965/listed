@@ -21,8 +21,8 @@ RSpec.describe ItemsController, type: :controller do
       expect(assigns(:item)).to eq Item.first
     end
 
-    it "renders the user show view" do
-      expect(response).to render_template :show
+    it "redirects to the user show view" do
+      expect(response).to redirect_to @user
     end
   end
 end
