@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ItemsController, type: :controller do
-  let(:@user) { create(:user, email: "listeduser@email.com") }
+  let(:@user) { create(:user, email: Faker::Internet.email) }
   let(:@item) { create(:item, user: @user) }
 
   before(:each) do
@@ -13,11 +13,11 @@ RSpec.describe ItemsController, type: :controller do
   describe "POST create" do
 
     it "increments item by 1" do
-      expect{post :create, item: {name: Faker::StarWars.quote, email: "listeduser@email.com"}}.to change(Item,:count).by(1)
+      expect{post :create, item: {name: Faker::StarWars.quote, user_id: 1}}.to change(Item,:count).by(1)
     end
 
     it "assigns the new item to @item" do
-      post :create, item: {name: Faker::StarWars.quote, email: "listeduser@email.com"}
+      post :create, item: {name: Faker::StarWars.quote, user_id: 1}
       expect(assigns(:item)).to eq Item.first
     end
 
