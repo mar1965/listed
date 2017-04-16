@@ -22,7 +22,7 @@ RSpec.describe ItemsController, type: :controller do
     end
 
     it "renders the user show view" do
-      expect(response).to redirect_to
+      expect(response).to render_template :show
     end
   end
 end
