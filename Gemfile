@@ -37,7 +37,7 @@ group :development, :test do
   gem 'pry-rails'
 end
 
-gem 'devise', '~> 4.1', '>= 4.1.1'
+gem 'devise', '~> 4.7'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
